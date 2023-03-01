@@ -122,6 +122,7 @@ exp_hydi$GENERAL <-
 
 
 # export to csv
+if (!dir.exists("./csv")) {dir.create("./csv")}
 for (name in names(hydi.na)){
   write_csv(exp_hydi[[name]], paste0("./csv/", tolower(name), ".csv"))
 }
