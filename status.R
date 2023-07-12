@@ -1,16 +1,18 @@
 library(tidyverse)
 
-# load hydi.na
-load("../EUHYDI_NA_v1_1.Rdata")
-for (name in names(hydi.na)){
-  expres <- parse(text = paste0(tolower(name), " <- hydi.na$", name), keep.source = FALSE)
+# load HYDI_SOURCE_nd_qa3.Rdata
+p2h <- readline("Path to HYDI_SOURCE_nd_qa3.Rdata")
+load(p2h)
+for (name in names(hydi)){
+  expres <- parse(text = paste0(tolower(name), " <- hydi$", name), keep.source = FALSE)
   print(expres)
   eval(expres)
 }
 
-# load license status
+# load license status EUHYDI_License/status_20210512.xlsx
+p2l <- readline("Path to EUHYDI_License status file (xlsx)")
 status <- readxl::read_xlsx(
-  "../EUHYDI_License/status_20210512.xlsx",
+  p2l,
   skip = 2
   ) %>%
   # lower case, remove spaces and restrict name to 10 char 
@@ -18,6 +20,8 @@ status <- readxl::read_xlsx(
 
 # agreed + license
 status %>% filter(and_hereby == "accept" & !is.na(please_upl)) %>% select(email_sent, contributi)
+# missing license files?
+status %>% filter(and_hereby == "accept" & !is.na(please_upl) & is.na(license_fi)) %>% select(email_sent, contributi)
 # agreed + no license
 status %>% filter(and_hereby == "accept" & is.na(please_upl)) %>% select(email_sent, contributi)
 # waiting for statement
@@ -65,6 +69,7 @@ status$source %in% sources
 
 # which sources need to be extracted?
 exp_sources <- status %>% filter(and_hereby == "accept" & !grepl("waiting", tolower(comments))) %>% select(source)
+status %>% filter(and_hereby == "accept" & !grepl("waiting", tolower(comments))) %>% select(source,email_sent, contributi)
 # from which of those sources must we remove the geographical coordinates?
 exp_nogeog <- status %>% filter(grepl("without", comments) & and_hereby == "accept") %>% select(source)
 
@@ -89,10 +94,7 @@ Ksat %>%
   select(SAMPLE_ID) %>%
   unique() %>%
   nrow()
-Ksat %>%
-  select(PROFILE_ID) %>%
-  unique() %>%
-  nrow()
+
 
 ## filter sources
 filter_fun <- function(df){
@@ -122,7 +124,38 @@ exp_hydi$GENERAL <-
 
 
 # export to csv
-if (!dir.exists("./csv")) {dir.create("./csv")}
+if (!dir.exists("./euhydi_public_csv")) {dir.create("./euhydi_public_csv")}
 for (name in names(hydi.na)){
-  write_csv(exp_hydi[[name]], paste0("./csv/", tolower(name), ".csv"))
+  write_csv(exp_hydi[[name]], paste0("./euhydi_public_csv/", name, ".csv"))
 }
+
+# copy references and metadata from "../EU_HYDI/HYDI_SOURCE_nd_qa3_csv"
+file.copy(from = "../EU_HYDI/HYDI_SOURCE_nd_qa3_csv/METADATA.csv", to = "./euhydi_public_csv/METADATA.csv")
+file.copy(from = "../EU_HYDI/HYDI_SOURCE_nd_qa3_csv/REFERENCES.csv", to = "./euhydi_public_csv/REFERENCES.csv")
+
+
+# Norway
+general %>% filter(SOURCE == "Kvaerno") %>% group_by(CONTACT_P) %>% count()
+
+# table status
+tbl <- status %>%
+  select(contributi, and_hereby, license_fi, comments, source) %>%
+  left_join(general %>% 
+              # group_by(SOURCE, ISO_COUNTRY) %>%
+              # count(substr(CONTACT_A, start=1, stop=30)) %>%
+              count(SOURCE) %>%
+              rename("n_profiles" = "n"),
+            by = c("source" = "SOURCE")
+            ) %>% 
+  left_join(basic %>% 
+              count(SOURCE) %>% 
+              rename("n_samples" = "n"),
+            by = c("source" = "SOURCE")) %>%
+  mutate(Access = if_else(and_hereby == "accept" & !grepl("waiting", tolower(comments)), true = "public", false = "restricted", missing = "restricted"),
+         .after = contributi) %>%
+  select(- and_hereby) %>%
+  arrange(Access, contributi) %>%
+  rename(Contributor = contributi,
+         Licence_File = license_fi,
+         Comment = comments)
+knitr::kable(tbl, format = "html", caption = "Status of EU-HYDI contributions")
