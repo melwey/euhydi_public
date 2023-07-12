@@ -1,0 +1,70 @@
+The European Hydropedological Data Inventory (EU-HYDI) contains soil properties with a special focus on hydrological properties. It also includes various other measured soil characteristics associated to the same samples. It can hence serve multiple purposes, including scientific research, modelling and application of models at different geographical scales.
+
+---- Background ----
+The database stems from an initiative from the European Commission Joint Research Centre. In November 2011, leading European soil hydrologists, including members of the European Soil Bureau Network were invited to discuss the possibilities to assemble a comprehensive European Hydropedological Data Inventory. Scientists from institutions from across Europe expressed their interest in participating in this proposal and assembled in Ispra, Italy on the 12 April 2012 and again on 4-5 March 2013 with the goal to establish the scientific principles, database structure and the implementation of the EU-HYDI. The participants shared the common interest to establish a joint database (the EU-HYDI) with equal access rights for the advancement of hydropedological research and applications in Europe.
+
+---- Data availability ----
+When the EU-HYDI was established, its contributors agreed that all raw data contained in the database were accessible only to the contributing participants and the EU-HYDI coordinators at the JRC. Thus, authorised users of the raw data were limited exclusively to the authors of the EU-HYDI report (doi:10.2788/5936).
+Over the years, third parties have on several occasions requested access to the data. Some contributors have now given the JRC licence to distribute their raw data publicly on the European Soil Data Centre. The table below summarises the contributions status. The intellectual property rights related to the data remain with the data providers. 
+When data are used and derived product is published, data contributors are cited through a reference to the EU-HYDI report or its chapters, in case if only a subset of data from three or less institutions are involved in the research. Shorthand data source should be referenced as ESDAC/EU-HYDI and link to this page of the ESDAC.
+
+
+--- Data structure ----
+The European HYdropedological Data Inventory collects data from European soils focusing on soil physical, chemical and hydrological properties. It also contains information on geographical location, soil classification and land use/cover at the time of sampling. It was assembled with the aim of encompassing the soil variability in Europe.
+The database consists of ten tables: the first nine hold original data while the last contains harmonized data (Table 2). Each profile from table GENERAL has a unique identifier of 8 digits. In tables BASIC, CHEMICAL, PSIZE, RET and COND, each sample is uniquely identified by its sample identifier: the profile identifier (8 digits) to which 2 digits are added for the sample. Tables can be linked through these two keys.
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Table 2. List of tables in EU-HYDI database</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Name</td>
+            <td>Description</td>
+  		</tr>
+  		<tr>
+            <td>GENERAL</td>
+            <td>General profile properties</td>
+  		</tr>
+  		<tr>
+            <td>BASIC</td>
+            <td>Basic and physical data at the sampling layer level</td>
+  		</tr>
+  		<tr>
+            <td>CHEMICAL</td>
+            <td>Chemical data at the sampling layer level</td>
+  		</tr>
+  		<tr>
+            <td>PSIZE</td>
+            <td>Measured particle size distribution data at the sampling layer level</td>
+  		</tr>
+  		<tr>
+            <td>RET</td>
+            <td>Measured soil water retention data at the sampling layer level</td>
+  		</tr>
+  		<tr>
+            <td>COND</td>
+            <td>Measured soil hydraulic conductivity data at the sampling layer level</td>
+  		</tr>
+  		<tr>
+            <td>METHOD</td>
+            <td>Measurement methods</td>
+  		</tr>
+  		<tr>
+            <td>TSERMETA</td>
+            <td>Time series metadata</td>
+  		</tr>
+  		<tr>
+            <td>TSERDATA</td>
+            <td>Time series data</td>
+  		</tr>
+  		<tr>
+            <td>HPSD</td>
+            <td>Harmonized particle size distribution</td>
+  		</tr>
+    </tbody>
+</table>
+ 
+ 

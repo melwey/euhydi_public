@@ -1,7 +1,7 @@
 library(tidyverse)
 
-# load HYDI_SOURCE_nd_qa3.Rdata
-p2h <- readline("Path to HYDI_SOURCE_nd_qa3.Rdata")
+# load EUHYDI_v1_1.Rdata
+p2h <- readline("Path to EUHYDI_v1_1.Rdata")
 load(p2h)
 for (name in names(hydi)){
   expres <- parse(text = paste0(tolower(name), " <- hydi$", name), keep.source = FALSE)
@@ -73,9 +73,6 @@ status %>% filter(and_hereby == "accept" & !grepl("waiting", tolower(comments)))
 # from which of those sources must we remove the geographical coordinates?
 exp_nogeog <- status %>% filter(grepl("without", comments) & and_hereby == "accept") %>% select(source)
 
-# total number of samples by source
-basic %>% count(SOURCE)
-
 # How many Ksat?
 # extract Ksat
 Ksat <- cond[cond$IND_VALUE==1 & cond$VALUE==0,]
@@ -106,9 +103,9 @@ filter_fun <- function(df){
     }
 }
 
-exp_hydi <- lapply(hydi.na, filter_fun)
+exp_hydi <- lapply(hydi, filter_fun)
 
-set_na <- function(x){x[] <- NA}
+set_na <- function(x){x[] <- -999}
 
 # remove coord
 gen_nogeog <- exp_hydi$GENERAL %>%
@@ -129,9 +126,9 @@ for (name in names(hydi.na)){
   write_csv(exp_hydi[[name]], paste0("./euhydi_public_csv/", name, ".csv"))
 }
 
-# copy references and metadata from "../EU_HYDI/HYDI_SOURCE_nd_qa3_csv"
-file.copy(from = "../EU_HYDI/HYDI_SOURCE_nd_qa3_csv/METADATA.csv", to = "./euhydi_public_csv/METADATA.csv")
-file.copy(from = "../EU_HYDI/HYDI_SOURCE_nd_qa3_csv/REFERENCES.csv", to = "./euhydi_public_csv/REFERENCES.csv")
+# copy references and metadata from "../EUHYDI_v1_1_csv"
+file.copy(from = "../eu_hydi_build/output/EUHYDI_v1_1_csv/METADATA.csv", to = "./euhydi_public_csv/METADATA.csv")
+file.copy(from = "../eu_hydi_build/output/EUHYDI_v1_1_csv/REFERENCES.csv", to = "./euhydi_public_csv/REFERENCES.csv")
 
 
 # Norway
@@ -144,12 +141,12 @@ tbl <- status %>%
               # group_by(SOURCE, ISO_COUNTRY) %>%
               # count(substr(CONTACT_A, start=1, stop=30)) %>%
               count(SOURCE) %>%
-              rename("n_profiles" = "n"),
+              rename(`N profiles` = "n"),
             by = c("source" = "SOURCE")
             ) %>% 
   left_join(basic %>% 
               count(SOURCE) %>% 
-              rename("n_samples" = "n"),
+              rename(`N samples` = "n"),
             by = c("source" = "SOURCE")) %>%
   mutate(Access = if_else(and_hereby == "accept" & !grepl("waiting", tolower(comments)), true = "public", false = "restricted", missing = "restricted"),
          .after = contributi) %>%
@@ -157,5 +154,7 @@ tbl <- status %>%
   arrange(Access, contributi) %>%
   rename(Contributor = contributi,
          Licence_File = license_fi,
-         Comment = comments)
-knitr::kable(tbl, format = "html", caption = "Status of EU-HYDI contributions")
+         Comment = comments,
+         `Source in HYDI` = source) %>%
+  dplyr::select(-Licence_File, -Comment)
+knitr::kable(tbl, caption = "Status of EU-HYDI contributions")
