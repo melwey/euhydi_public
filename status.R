@@ -122,7 +122,7 @@ exp_hydi$GENERAL <-
 
 # export to csv
 if (!dir.exists("./euhydi_public_csv")) {dir.create("./euhydi_public_csv")}
-for (name in names(hydi.na)){
+for (name in names(hydi)){
   write_csv(exp_hydi[[name]], paste0("./euhydi_public_csv/", name, ".csv"))
 }
 
@@ -158,3 +158,4 @@ tbl <- status %>%
          `Source in HYDI` = source) %>%
   dplyr::select(-Licence_File, -Comment)
 knitr::kable(tbl, caption = "Status of EU-HYDI contributions")
+knitr::kable(tbl, format = "html", caption = "Status of EU-HYDI contributions")

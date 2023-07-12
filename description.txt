@@ -8,6 +8,216 @@ When the EU-HYDI was established, its contributors agreed that all raw data cont
 Over the years, third parties have on several occasions requested access to the data. Some contributors have now given the JRC licence to distribute their raw data publicly on the European Soil Data Centre. The table below summarises the contributions status. The intellectual property rights related to the data remain with the data providers. 
 When data are used and derived product is published, data contributors are cited through a reference to the EU-HYDI report or its chapters, in case if only a subset of data from three or less institutions are involved in the research. Shorthand data source should be referenced as ESDAC/EU-HYDI and link to this page of the ESDAC.
 
+<table>
+<caption>Table 1. Status of EU-HYDI contributions</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Contributor </th>
+   <th style="text-align:left;"> Access </th>
+   <th style="text-align:left;"> Source in HYDI </th>
+   <th style="text-align:right;"> N profiles </th>
+   <th style="text-align:right;"> N samples </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Belgium: Earth and Life Institute, UCLouvain </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Javaux </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 44 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Belgium: Ghent University </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Cornelis </td>
+   <td style="text-align:right;"> 120 </td>
+   <td style="text-align:right;"> 241 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Germany: ZALF Müncheberg </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Schindler_HYPRES </td>
+   <td style="text-align:right;"> 52 </td>
+   <td style="text-align:right;"> 471 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Germany: ZALF Müncheberg </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Schindler </td>
+   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:right;"> 298 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Hungary: University of Pannonia </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Mako </td>
+   <td style="text-align:right;"> 308 </td>
+   <td style="text-align:right;"> 900 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Italy: University of Palermo </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Iovino </td>
+   <td style="text-align:right;"> 375 </td>
+   <td style="text-align:right;"> 417 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Netherlands: Wageningen University </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Wosten_HYPRES </td>
+   <td style="text-align:right;"> 102 </td>
+   <td style="text-align:right;"> 358 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Poland: Institute of Agrophysics, Polish Academy of Sciences, Lublin </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Lamorski </td>
+   <td style="text-align:right;"> 281 </td>
+   <td style="text-align:right;"> 447 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Portugal: Instituto Nacional de Investigação Agrária e Veterinária </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Goncalves </td>
+   <td style="text-align:right;"> 330 </td>
+   <td style="text-align:right;"> 697 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Russian Federation: Moscow State University </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Shein </td>
+   <td style="text-align:right;"> 65 </td>
+   <td style="text-align:right;"> 304 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Sweden: Swedish University of Agricultural Sciences </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Katterer </td>
+   <td style="text-align:right;"> 185 </td>
+   <td style="text-align:right;"> 1744 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Ukraine: National Scientific Center, Institute for Soil Science and Agrochemistry Research named after ON Sokolovskiy, Kharkiv </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Patyka </td>
+   <td style="text-align:right;"> 95 </td>
+   <td style="text-align:right;"> 529 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> United Kingdom: James Hutton Institute </td>
+   <td style="text-align:left;"> public </td>
+   <td style="text-align:left;"> Lilly </td>
+   <td style="text-align:right;"> 43 </td>
+   <td style="text-align:right;"> 133 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Austria: Federal Agency for Water Management </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Strauss </td>
+   <td style="text-align:right;"> 68 </td>
+   <td style="text-align:right;"> 204 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Czechia: Czech University of Life Science in Prague </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Matula </td>
+   <td style="text-align:right;"> 72 </td>
+   <td style="text-align:right;"> 174 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> France: INRA, Orléans </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Daroussin </td>
+   <td style="text-align:right;"> 123 </td>
+   <td style="text-align:right;"> 352 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Germany: BGR </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Hennings_HYPRES </td>
+   <td style="text-align:right;"> 518 </td>
+   <td style="text-align:right;"> 1527 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Greece: Aristotle University of Thessaloniki </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Bilas </td>
+   <td style="text-align:right;"> 883 </td>
+   <td style="text-align:right;"> 2588 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Italy: University of Naples Federico II </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Romano </td>
+   <td style="text-align:right;"> 451 </td>
+   <td style="text-align:right;"> 623 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Italy: University of Padova </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Morari </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 14 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Norway: Bioforsk Soil and Environment </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Kvaerno </td>
+   <td style="text-align:right;"> 504 </td>
+   <td style="text-align:right;"> 2033 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Norway: Norwegian Forest and Landscape Institute </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Kvaerno </td>
+   <td style="text-align:right;"> 504 </td>
+   <td style="text-align:right;"> 2033 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Norway: Norwegian University of Life Sciences </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Kvaerno </td>
+   <td style="text-align:right;"> 504 </td>
+   <td style="text-align:right;"> 2033 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Norway: Nowegian Water Resources and Energy Directorate </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Kvaerno </td>
+   <td style="text-align:right;"> 504 </td>
+   <td style="text-align:right;"> 2033 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Slovakia: Soil Fertility Research Institute </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Houskova </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 97 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Slovakia: Soil Science and Conservation Research Institute </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Houskova_HYPRES </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 58 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Spain: Evenor-Tech </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Anaya </td>
+   <td style="text-align:right;"> 1081 </td>
+   <td style="text-align:right;"> 3787 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> United Kingdom: Cranfield University </td>
+   <td style="text-align:left;"> restricted </td>
+   <td style="text-align:left;"> Cranfield </td>
+   <td style="text-align:right;"> 119 </td>
+   <td style="text-align:right;"> 426 </td>
+  </tr>
+</tbody>
+</table>
 
 --- Data structure ----
 The European HYdropedological Data Inventory collects data from European soils focusing on soil physical, chemical and hydrological properties. It also contains information on geographical location, soil classification and land use/cover at the time of sampling. It was assembled with the aim of encompassing the soil variability in Europe.
@@ -67,4 +277,7 @@ The database consists of ten tables: the first nine hold original data while the
     </tbody>
 </table>
  
- 
+ ----- Reference -----
+ Weynants, M., Montanarella, L., Tóth, G., Arnoldussen, A., Anaya Romero, M., Bilas, G., Borresen T., Cornelis W., Daroussin J., Gonalves M., Hannam J., Haugen L.E., Hennings V., Houskova B., Iovino M., Javaux M., Keay C.A., Kätterer T., Kvaerno S., Laktinova T., Lamorski K., Lilly A., Mako A., Matula S., Morari F., Nemes A., Patyka N.V., Romano N., Schindler U., Shein E., Slawinski C., Strauss P, Tóth B., Wösten, H. (2013). European HYdropedological data inventory (EU-HYDI). EUR – Scientific and Technical Research series – vol. EUR 26053 EN. Publications Office of the European Union, Luxembourg, GD Luxembourg. https://doi.org/10.2788/5936
+
+
