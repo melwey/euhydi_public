@@ -1,0 +1,5 @@
+*.zip
+.RData
+.Rhistory
+euhydi_public_csv/
+.DS_Store
