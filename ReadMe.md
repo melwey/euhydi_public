@@ -1,4 +1,5 @@
 # euhydi_public
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10987813.svg)](https://doi.org/10.5281/zenodo.10987813)
 Selection of EU-HYDI data for publication and export to csv.
 
 EU-HYDI stands for the **EUropean HYdrological Data Inventory**. It is a dataset of soil hydrological, physical and chemical properties assembled in 2013 in the context of EU FP7 project My Water. It contains data from more than 18000 soil samples contributed by 27 institutions in Europe. The compilation work was led by Mélanie Weynants at the Joint Research Centre of the European Commission (JRC).
