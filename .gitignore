@@ -2,4 +2,5 @@
 .RData
 .Rhistory
 euhydi_public_csv/
+*.csv
 .DS_Store
