@@ -1,20 +1,25 @@
-The European Hydropedological Data Inventory (EU-HYDI) contains soil properties with a special focus on hydrological properties. It also includes various other measured soil characteristics associated to the same samples. It can hence serve multiple purposes, including scientific research, modelling and application of models at different geographical scales.
+<h1 class="page-header">European Hydropedological Data Inventory (EU-HYDI) database</h1>
+<p>The European Hydropedological Data Inventory (EU-HYDI) contains soil properties with a special focus on hydrological properties. It also includes various other measured soil characteristics associated to the same samples. It can hence serve multiple purposes, including scientific research, modelling and application of models at different geographical scales.</p>
 
----- Background ----
-The database stems from an initiative from the European Commission Joint Research Centre. In November 2011, leading European soil hydrologists, including members of the European Soil Bureau Network were invited to discuss the possibilities to assemble a comprehensive European Hydropedological Data Inventory. Scientists from institutions from across Europe expressed their interest in participating in this proposal and assembled in Ispra, Italy on the 12 April 2012 and again on 4-5 March 2013 with the goal to establish the scientific principles, database structure and the implementation of the EU-HYDI. The participants shared the common interest to establish a joint database (the EU-HYDI) with equal access rights for the advancement of hydropedological research and applications in Europe.
+<p><strong>Background</strong></p>
+The database stems from an initiative from the European Commission Joint Research Centre. In November 2011, leading European soil hydrologists, including members of the European Soil Bureau Network were invited to discuss the possibilities to assemble a comprehensive European Hydropedological Data Inventory. Scientists from institutions from across Europe expressed their interest in participating in this proposal and assembled in Ispra, Italy on the 12 April 2012 and again on 4-5 March 2013 with the goal to establish the scientific principles, database structure and the implementation of the EU-HYDI. The participants shared the common interest to establish a joint database (EU-HYDI) with equal access rights for the advancement of hydropedological research and applications in Europe.
 
----- Data availability ----
-When the EU-HYDI was established, its contributors agreed that all raw data contained in the database were accessible only to the contributing participants and the EU-HYDI coordinators at the JRC. Thus, authorised users of the raw data were limited exclusively to the authors of the EU-HYDI report (doi:10.2788/5936).
-Over the years, third parties have on several occasions requested access to the data. Some contributors have now given the JRC licence to distribute their raw data publicly on the European Soil Data Centre. The table below summarises the contributions status. The intellectual property rights related to the data remain with the data providers. 
-When data are used and derived product is published, data contributors are cited through a reference to the EU-HYDI report or its chapters, in case if only a subset of data from three or less institutions are involved in the research. Shorthand data source should be referenced as ESDAC/EU-HYDI and link to this page of the ESDAC.
+<p><strong>Data availability</strong></p>
+<p>When the EU-HYDI was established, its contributors agreed that all raw data contained in the database were accessible only to the contributing participants and the EU-HYDI coordinators at the JRC. Thus, authorised users of the raw data were limited exclusively to the authors of the EU-HYDI report (<a href="https://doi.org/10.2788/5936">doi:10.2788/5936</a>).</p>
+<p>Over the years, third parties have on several occasions requested access to the data. Some contributors have now given the JRC licence to distribute their raw data publicly on the <a href=https://esdac.jrc.ec.europa.eu>European Soil Data Centre</a>. The table below summarises the contributions status. The intellectual property rights related to the data remain with the data providers. </p>
+<p>When data are used and derived products are published, data are cited through a reference to the EU-HYDI report or its chapters, in case only a subset of data from three or less institutions are involved in the research. Shorthand data source should be referenced as ESDAC/EU-HYDI and link to this page of the ESDAC.</p>
+
+<p><strong>Further contributions</strong></p>
+<p>New data can be contributed to the database under CC-BY license. Please contact <a href="mailto:ec-esdac@ec.europa.eu,panos.panagos@ec.europa.eu?subject=Dataset Help Desk - ID xx - European Hydropedological Data Inventory (EU-HYDI) database">ec-esdac@ec.europa.eu</a>
+</p>
 
 <table>
-<caption>Table 1. Status of EU-HYDI contributions</caption>
+<caption><strong>Table 1. Status of EU-HYDI contributions</strong></caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Contributor </th>
    <th style="text-align:left;"> Access </th>
-   <th style="text-align:left;"> Source in HYDI </th>
+   <th style="text-align:left;"> Source in EU-HYDI </th>
    <th style="text-align:right;"> N profiles </th>
    <th style="text-align:right;"> N samples </th>
   </tr>
@@ -219,21 +224,20 @@ When data are used and derived product is published, data contributors are cited
 </tbody>
 </table>
 
---- Data structure ----
-The European HYdropedological Data Inventory collects data from European soils focusing on soil physical, chemical and hydrological properties. It also contains information on geographical location, soil classification and land use/cover at the time of sampling. It was assembled with the aim of encompassing the soil variability in Europe.
-The database consists of ten tables: the first nine hold original data while the last contains harmonized data (Table 2). Each profile from table GENERAL has a unique identifier of 8 digits. In tables BASIC, CHEMICAL, PSIZE, RET and COND, each sample is uniquely identified by its sample identifier: the profile identifier (8 digits) to which 2 digits are added for the sample. Tables can be linked through these two keys.
+<p><strong>Data structure</strong></p>
+<p>The European HYdropedological Data Inventory collects data from European soils focusing on soil physical, chemical and hydrological properties. It also contains information on geographical location, soil classification and land use/cover at the time of sampling. It was assembled with the aim of encompassing the soil variability in Europe.</p>
+<p>The database consists of ten tables: the first nine hold original data while the last contains harmonized data (Table 2). Each profile from table GENERAL has a unique identifier of 8 digits. In tables BASIC, CHEMICAL, PSIZE, RET and COND, each sample is uniquely identified by its sample identifier: the profile identifier (8 digits) to which 2 digits are added for the sample. Tables can be linked through these two keys.</p>
 
 <table>
+    <caption><strong>Table 2. List of tables in EU-HYDI database</strong></caption>
     <thead>
         <tr>
-            <th colspan="2">Table 2. List of tables in EU-HYDI database</th>
-        </tr>
+            <th style="text-align:left;">Table Name</th>
+            <th style="text-align:left;">Description</th>
+  		</tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Table Name</td>
-            <td>Description</td>
-  		</tr>
+        
   		<tr>
             <td>GENERAL</td>
             <td>General profile properties</td>
@@ -263,21 +267,13 @@ The database consists of ten tables: the first nine hold original data while the
             <td>Measurement methods</td>
   		</tr>
   		<tr>
-            <td>TSERMETA</td>
-            <td>Time series metadata</td>
-  		</tr>
-  		<tr>
-            <td>TSERDATA</td>
-            <td>Time series data</td>
-  		</tr>
-  		<tr>
-            <td>HPSD</td>
+            <td>PSD_EST</td>
             <td>Harmonized particle size distribution</td>
   		</tr>
     </tbody>
 </table>
  
- ----- Reference -----
+<p><strong>Reference</strong></p>
  Weynants, M., Montanarella, L., Tóth, G., Arnoldussen, A., Anaya Romero, M., Bilas, G., Borresen T., Cornelis W., Daroussin J., Gonalves M., Hannam J., Haugen L.E., Hennings V., Houskova B., Iovino M., Javaux M., Keay C.A., Kätterer T., Kvaerno S., Laktinova T., Lamorski K., Lilly A., Mako A., Matula S., Morari F., Nemes A., Patyka N.V., Romano N., Schindler U., Shein E., Slawinski C., Strauss P, Tóth B., Wösten, H. (2013). European HYdropedological data inventory (EU-HYDI). EUR – Scientific and Technical Research series – vol. EUR 26053 EN. Publications Office of the European Union, Luxembourg, GD Luxembourg. https://doi.org/10.2788/5936
 
 
